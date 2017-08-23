@@ -1,0 +1,30 @@
+{% if officers_list %}
+    {% for officer in officers_list %}
+    <div class="officer-tile col s12 m6 l3" id="{{ officer.username }}">
+        <div class="card-panel grey lighten-5">
+            <h4><b>{{ officer.position }}</b></h4><br>
+            <h5>{{ officer.name }}</h5><br>
+            
+            {% if officer.email %}
+            <a href="mailto:{{ officer.email }}"><i class="email">E</i></a>
+            {% endif %}
+
+            {% if officer.website %}
+            <a href="{{ officer.website }}"><i class="website">S</i></a>
+            {% endif %}
+
+            {% if officer.github %}
+            <a href="{{ officer.github }}"><i class="github">G</i></a>
+            {% endif %}
+
+            {% if officer.linkedin %}
+            <a href="{{ officer.linkedin }}"><i class="linkedin">L</i></a>
+            {% endif %}
+
+            <p>{{ officer.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <p>This club does not seem to have any officers...</p>
+{% endif %}

@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+endpoint='cplug'
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^officers/', include("officers.urls")),
+    url(rf'^{endpoint}/admin/', admin.site.urls),
+    url(rf'^{endpoint}/', include("officers.urls")),
 ]

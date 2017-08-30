@@ -16,19 +16,19 @@
                 <div class="col s10">
                   <span class="black-text">
                       {% if officer.email %}
-                      <a href="mailto:{{ officer.email }}"><i class="email">E</i></a>
+                      <a href="mailto:{{ officer.email }}"><i class="fa fa-email"></i></a>
                       {% endif %}
 
                       {% if officer.website %}
-                      <a href="{{ officer.website }}"><i class="website">S</i></a>
+                      <a href="{{ officer.website }}"><i class="fa fa-globe"></i></a>
                       {% endif %}
 
                       {% if officer.github %}
-                      <a href="{{ officer.github }}"><i class="github">G</i></a>
+                      <a href="{{ officer.github }}"><i class="fa fa-github"></i></a>
                       {% endif %}
 
                       {% if officer.linkedin %}
-                      <a href="{{ officer.linkedin }}"><i class="linkedin">L</i></a>
+                      <a href="{{ officer.linkedin }}"><i class="fa fa-linkedin"></i></a>
                       {% endif %}
 
                       <br>

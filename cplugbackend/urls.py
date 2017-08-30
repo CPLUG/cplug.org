@@ -20,5 +20,5 @@ endpoint='cplug'
 
 urlpatterns = [
     url(rf'^{endpoint}/admin/', admin.site.urls),
-    url(rf'^{endpoint}/officers', include("officers.urls")),
+    url(rf'^{endpoint}/officers/', include("officers.urls")),
 ]

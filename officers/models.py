@@ -10,3 +10,6 @@ class Officer(models.Model):
     github = models.URLField('GitHub', blank=True)
     linkedin = models.URLField('LinkedIn', blank=True)
     description = models.CharField('Description', max_length=200)
+
+    def __str__(self):
+        return "Officer: " + self.name

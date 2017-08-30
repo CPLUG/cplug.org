@@ -1,29 +1,45 @@
 {% if officers_list %}
     {% for officer in officers_list %}
-    <div class="officer-tile col s12 m6 l3" id="{{ officer.username }}">
-        <div class="card-panel grey lighten-5">
-            <h4><b>{{ officer.position }}</b></h4><br>
-            <h5>{{ officer.name }}</h5><br>
-            
-            {% if officer.email %}
-            <a href="mailto:{{ officer.email }}"><i class="email">E</i></a>
-            {% endif %}
-
-            {% if officer.website %}
-            <a href="{{ officer.website }}"><i class="website">S</i></a>
-            {% endif %}
-
-            {% if officer.github %}
-            <a href="{{ officer.github }}"><i class="github">G</i></a>
-            {% endif %}
-
-            {% if officer.linkedin %}
-            <a href="{{ officer.linkedin }}"><i class="linkedin">L</i></a>
-            {% endif %}
-
-            <p>{{ officer.description }}</p>
+    <li id="{{ officer.username }}">
+        <div class="collapsible-header">
+            {{ officer.position }}: {{ officer.name }}
+            <i class="material-icons">expand_more</i>
         </div>
-    </div>
+
+        <div class="collapsible-body grey darken-3">
+          <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="card-panel grey lighten-5 z-depth-1">
+              <div class="row valign-wrapper">
+                <div class="col s2">
+                  <img src="images/sample.jpg" alt="" class="circle responsive-img">
+                </div>
+                <div class="col s10">
+                  <span class="black-text">
+                      {% if officer.email %}
+                      <a href="mailto:{{ officer.email }}"><i class="email">E</i></a>
+                      {% endif %}
+
+                      {% if officer.website %}
+                      <a href="{{ officer.website }}"><i class="website">S</i></a>
+                      {% endif %}
+
+                      {% if officer.github %}
+                      <a href="{{ officer.github }}"><i class="github">G</i></a>
+                      {% endif %}
+
+                      {% if officer.linkedin %}
+                      <a href="{{ officer.linkedin }}"><i class="linkedin">L</i></a>
+                      {% endif %}
+
+                      <br>
+                      <p>{{ officer.description }}</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>	     
+        <div>
+    </li>
     {% endfor %}
 {% else %}
     <p>This club does not seem to have any officers...</p>

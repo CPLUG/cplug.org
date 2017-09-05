@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-endpoint='cplug'
+endpoint = "api"
 
 urlpatterns = [
     url(rf'^{endpoint}/admin/', admin.site.urls),

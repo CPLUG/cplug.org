@@ -1,2 +1,2 @@
 cplugbackend/secret.py
-*__pycache__*
+*.pyc

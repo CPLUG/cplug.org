@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = secret.hosts 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'officers.apps.OfficersConfig',
     'events.apps.EventsConfig',
+    'index.apps.IndexConfig',
     # 'rest_framework',
 ]
 
@@ -124,7 +124,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/assets/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "assets"),
+]
 
 # REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,

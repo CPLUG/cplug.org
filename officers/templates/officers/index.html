@@ -1,3 +1,5 @@
+{% load static %}
+
 {% if officers_list %}
     {% for officer in officers_list %}
     <li id="{{ officer.username }}">
@@ -11,7 +13,7 @@
             <div class="card-panel grey lighten-5 z-depth-1">
               <div class="row valign-wrapper">
                 <div class="col s2">
-                  <img src="images/sample.jpg" alt="" class="circle responsive-img">
+                    <img src="{% static "media/sample.jpg" %}" alt="" class="circle responsive-img">
                 </div>
                 <div class="col s10">
                   <span class="black-text">

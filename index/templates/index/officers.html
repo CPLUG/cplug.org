@@ -4,24 +4,15 @@
 
 {% if officers_list %}
     {% for officer in officers_list %}
-    <div class="officer-tile col s12 m12 l12 xl6" id="{{ officer.username }}" style="overflow-y: hidden;">
-        <div class="card" style="height: 350px;">
-           <div class="row valign-wrapper">
-           
-        	  <div class="col s4 m4 l5 xl5 hide-on-med-and-down" style="overflow: hidden;">
-        		<img src="{% static "media/sample2.jpg" %}" style="max-width: 100%; outline: 0px; height: 350px;">
-      	  </div>
-      	  
-      	  
-          <div class="col s12 m12 l7 xl7">
-           <div class="card-stacked">
-       		 <div class="card-content black-text" style="height: 290px;">
-            <span class="card-title">{{ officer.position }}</b>: {{ officer.name }}</span>
+    <div class="officer-tile col s12 m6 l4 xl4" id="{{ officer.username }}" style="overflow-y: hidden;">
+            <div class="card waves-effect waves-block waves-light hoverable">
+                <a class="modal-trigger" href="#modal1{{ officer.username }}">
+       		 <div class="card-content black-text">
+                 <span class="card-title"><b>{{ officer.position }}</b><br>{{ officer.name }}</span>
 
-            <p>{{ officer.description }}</p>
-        </div>
-        
-        <div class="card-action" style="height: 60px;">
+            <!--<p>{{ officer.description }}</p> 1-->
+                    </div></a>
+        <div class="card-action black-text">
           {% if officer.email %}
             <a href="mailto:{{ officer.email }}"><i class="fa fa-envelope"></i></a>
             {% endif %}
@@ -37,12 +28,30 @@
             {% if officer.linkedin %}
             <a href="{{ officer.linkedin }}"><i class="fa fa-linkedin"></i></a>
             {% endif %}
+            <a class="modal-trigger" href="#modal1{{ officer.username }}"><i class="material-icons right">more_vert</i></a>
         </div>
-        </div>
-        </div>
-        </div>
+            </div>
+        
+</div>
+
+<div id="modal1{{ officer.username }}" class="modal">
+    <div class="modal-content">
+      <h4><b>{{ officer.position }}: </b>{{ officer.name }}</h4>
+        <hr><br>
+        <div class="row">
+            <div class="col s12 m12 l4 xl4">
+                <div style="display: block; margin: auto;"><img class="responsive-img circle" src="{% static "media/sample2.jpg" %}"></div>
+            </div>
+            <div class="col s12 m12 l8 xl8">
+                <p>{{ officer.description }}</p>
+            </div>
         </div>
     </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
+    </div>
+  </div>
+
     {% endfor %}
 {% else %}
     <p>This club does not seem to have any officers...</p>

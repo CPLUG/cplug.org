@@ -6,4 +6,5 @@ A backend written with Django to manage officers, blog posts, and more!
     - Figure out Markdown system -- can Django do this?
 - Set up help section
 - Set up officers portal
+    - Officers authentication
 

@@ -1,47 +1,47 @@
 {% load static %}
 
+
 {% if officers_list %}
     {% for officer in officers_list %}
-    <li id="{{ officer.username }}">
-        <div class="collapsible-header">
-            {{ officer.position }}: {{ officer.name }}
-            <i class="material-icons">expand_more</i>
+    <div class="officer-tile col s12 m12 l12 xl6" id="{{ officer.username }}" style="overflow-y: hidden;">
+        <div class="card" style="height: 350px;">
+           <div class="row valign-wrapper">
+           
+        	  <div class="col s4 m4 l5 xl5 hide-on-med-and-down" style="overflow: hidden;">
+        		<img src="{% static "media/sample2.jpg" %}" style="max-width: 100%; outline: 0px; height: 350px;">
+      	  </div>
+      	  
+      	  
+          <div class="col s12 m12 l7 xl7">
+           <div class="card-stacked">
+       		 <div class="card-content black-text" style="height: 290px;">
+            <span class="card-title">{{ officer.position }}</b>: {{ officer.name }}</span>
+
+            <p>{{ officer.description }}</p>
         </div>
+        
+        <div class="card-action" style="height: 60px;">
+          {% if officer.email %}
+            <a href="mailto:{{ officer.email }}"><i class="fa fa-envelope"></i></a>
+            {% endif %}
 
-        <div class="collapsible-body grey darken-3">
-          <div class="col s12 m8 offset-m2 l6 offset-l3">
-            <div class="card-panel grey lighten-5 z-depth-1">
-              <div class="row valign-wrapper">
-                <div class="col s2">
-                    <img src="{% static "media/sample.jpg" %}" alt="" class="circle responsive-img">
-                </div>
-                <div class="col s10">
-                  <span class="black-text">
-                      {% if officer.email %}
-                      <a href="mailto:{{ officer.email }}"><i class="fa fa-envelope"></i></a>
-                      {% endif %}
+            {% if officer.website %}
+            <a href="{{ officer.website }}"><i class="fa fa-globe"></i></a>
+            {% endif %}
 
-                      {% if officer.website %}
-                      <a href="{{ officer.website }}"><i class="fa fa-globe"></i></a>
-                      {% endif %}
+            {% if officer.github %}
+            <a href="{{ officer.github }}"><i class="fa fa-github"></i></a>
+            {% endif %}
 
-                      {% if officer.github %}
-                      <a href="{{ officer.github }}"><i class="fa fa-github"></i></a>
-                      {% endif %}
-
-                      {% if officer.linkedin %}
-                      <a href="{{ officer.linkedin }}"><i class="fa fa-linkedin"></i></a>
-                      {% endif %}
-
-                      <br>
-                      <p>{{ officer.description }}</p>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>	     
-        <div>
-    </li>
+            {% if officer.linkedin %}
+            <a href="{{ officer.linkedin }}"><i class="fa fa-linkedin"></i></a>
+            {% endif %}
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
     {% endfor %}
 {% else %}
     <p>This club does not seem to have any officers...</p>

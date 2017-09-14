@@ -20,6 +20,4 @@ from django.contrib import admin
 urlpatterns = [
     url(r'', include("index.urls")),
     url(rf'^admin/', admin.site.urls),
-    url(rf'^officers/', include("officers.urls")),
-    url(rf'^events/', include("events.urls")),
 ]

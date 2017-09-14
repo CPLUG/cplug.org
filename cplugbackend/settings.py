@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!c6u=&pux&)h@r5m(jev2&dw(2=b69wd8q1*lwndrp-722vjf7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = secret.DEBUG 
 
 ALLOWED_HOSTS = secret.hosts 
 
@@ -36,8 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'officers.apps.OfficersConfig',
-    'events.apps.EventsConfig',
     'index.apps.IndexConfig',
     # 'rest_framework',
 ]

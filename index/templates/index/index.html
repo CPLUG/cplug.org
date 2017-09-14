@@ -16,13 +16,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 
-    <script> 
-        $(function(){
-          $("#events_cards").load("events/");
-          $("#officers-cards").load("officers/");
-        });
-    </script>
-
   </head>
 
   <body>
@@ -106,7 +99,9 @@
       <br>
       <div class="row container" id="event_cards">
           <h3 class="white-text center">Upcoming Events</h3><br>
-      	<div id="events_cards"></div>
+      	<div id="events_cards">
+            {% include "index/events.html" %}
+        </div>
       </div>
     </div>	        
 
@@ -119,6 +114,7 @@
     <br>
       <div class="row" id="club-officers">
       <div id="officers-cards">
+            {% include "index/officers.html" %}
       </div>
     </div>
     </div>

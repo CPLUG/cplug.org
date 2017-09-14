@@ -1,2 +1,5 @@
 cplugbackend/secret.py
 *.pyc
+
+# I think this is from Bluefish
+*~

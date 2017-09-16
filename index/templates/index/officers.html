@@ -5,45 +5,43 @@
 {% if officers_list %}
     {% for officer in officers_list %}
     <div class="officer-tile col s12 m6 l4 xl4" id="{{ officer.username }}" style="overflow-y: hidden;">
-            <div class="card waves-effect waves-block waves-light hoverable">
-                <a class="modal-trigger" href="#modal1{{ officer.username }}">
-       		 <div class="card-content black-text">
-                 <span class="card-title"><b>{{ officer.position }}</b><br>{{ officer.name }}</span>
+            <div class="card waves-effect waves-block waves-light hoverable" style="height: 250px;">
+                <a class="modal-trigger" href="#modal1{{ officer.name }}">
+       		       <div class="card-content black-text" style="height: 180px;">
+                        <span class="card-title center-align"><b>{{ officer.position }}</b><br>{{ officer.name }}</span>
+                   </div>
+                </a>
+                <div class="card-action black-text" >
+                  {% if officer.email %}
+                    <a class="btn-floating red" style="margin-right: 6px;" href="{{ officer.email }}" target="_blank"><i class="material-icons">mail</i></a>
+                    {% endif %}
+                    
+                    {% if officer.website %}
+                    <a class="btn-floating green darken-1" href="{{ officer.website }}" style="margin-right: 6px;" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                    {% endif %}
 
-            <!--<p>{{ officer.description }}</p> 1-->
-                    </div></a>
-        <div class="card-action black-text">
-          {% if officer.email %}
-            <a href="mailto:{{ officer.email }}"><i class="fa fa-envelope"></i></a>
-            {% endif %}
+                    {% if officer.github %}
+                    <a class="btn-floating black" href="{{ officer.github }}" style="margin-right: 6px;" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    {% endif %}
 
-            {% if officer.website %}
-            <a href="{{ officer.website }}"><i class="fa fa-globe"></i></a>
-            {% endif %}
+                    {% if officer.linkedin %}
+                    {% endif %}
+                    <a class="btn-floating" style="color: #OO8CC9;" href="{{ officer.linkedin }}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a class="modal-trigger" style="color: black;" href="#modal1{{ officer.name }}"><i class="material-icons right">more_vert</i></a>
+                </div>
+            </div>    
+    </div>
 
-            {% if officer.github %}
-            <a href="{{ officer.github }}"><i class="fa fa-github"></i></a>
-            {% endif %}
-
-            {% if officer.linkedin %}
-            <a href="{{ officer.linkedin }}"><i class="fa fa-linkedin"></i></a>
-            {% endif %}
-            <a class="modal-trigger" href="#modal1{{ officer.username }}"><i class="material-icons right">more_vert</i></a>
-        </div>
-            </div>
-        
-</div>
-
-<div id="modal1{{ officer.username }}" class="modal">
+<div id="modal1{{ officer.name }}" class="modal">
     <div class="modal-content">
       <h4><b>{{ officer.position }}: </b>{{ officer.name }}</h4>
         <hr><br>
         <div class="row">
             <div class="col s12 m12 l4 xl4">
-                <div style="display: block; margin: auto;"><img class="responsive-img circle" src="{% static "media/sample2.jpg" %}"></div>
+                <div style="display: block; margin: auto; width: 194px;"><img class="responsive-img circle" src="{% static "media/sample2.jpg" %}"></div>
             </div>
             <div class="col s12 m12 l8 xl8">
-                <p>{{ officer.description }}</p>
+                <p class="flow-text">{{ officer.description }}</p>
             </div>
         </div>
     </div>

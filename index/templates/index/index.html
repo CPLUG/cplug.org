@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <div id="navbar"></div>
+    {% include "index/navbar.html" %}
 
  
     <div class="section green darken-2">
@@ -128,8 +128,7 @@
     
     
   </body>
-
-  <div id="footer"></div>
+  {% include "index/footer.html" %}
 
   <script>
     $( document ).ready(function(){
@@ -137,9 +136,6 @@
       $('.modal').modal();
       $('.parallax').parallax();
     })
-
-    $("#navbar").load("{% static "cplugbackend/navbar.html" %}");
-    $("#footer").load("{% static "cplugbackend/footer.html" %}");
     $('.carousel.carousel-slider').carousel({fullWidth: true});
 
   </script>

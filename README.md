@@ -7,4 +7,5 @@ A backend written with Django to manage officers, blog posts, and more!
 - Set up help section
 - Set up officers portal
     - Officers authentication
+- History app
 

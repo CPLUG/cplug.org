@@ -20,6 +20,7 @@ def index(request):
     for officer in officers:
         idf = officer.position[:4]
         pos = officers_order[idf]
+        officer.first = officer.name.split()[0].lower()
         officers_list[pos] = officer
 
     context = {'officers_list': officers_list, 'events': events}

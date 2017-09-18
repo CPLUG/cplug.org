@@ -1,17 +1,12 @@
-<html>
-    <head>
-        <title>CPLUG - History</title>
+{%extends "main.html"%}
+{% load static %}
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-        <link rel="stylesheet" href="main.css">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-    </head>
+{% block head_extra %}
+<title>History</title>
+{% endblock %}
+{% block content%}
 
-    <body>
     
-        <div id="navbar"></div>
         
         <div class="container">
         <h1>History</h1>
@@ -220,8 +215,10 @@ missing so far. Its been a long fun 10 years so far. :)
 Rob.</p>
         
 </div>
+
+{% endblock content %}
+{% block extras%}
     <script>
-    $("#navbar").load("navbar.html");
     
     $( document ).ready(function(){
         $(".button-collapse").sideNav();
@@ -232,6 +229,4 @@ Rob.</p>
   });
     
     </script>
-    
-    <script src="genOfficers.js"></script>
-</html>
+    {% endblock %} 

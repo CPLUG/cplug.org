@@ -10,8 +10,7 @@ class Officer(models.Model):
     github = models.URLField('GitHub', blank=True)
     linkedin = models.URLField('LinkedIn', blank=True)
     description = models.TextField('Description')
-    first = models.CharField('Name', max_length=50, blank=True)
-    picture = models.ImageField('Picture', upload_to='/officers', blank=True)
+    picture = models.ImageField('Picture', upload_to='officers', blank=True)
 
     def __str__(self):
         return "Officer: " + self.name

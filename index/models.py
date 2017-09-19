@@ -10,7 +10,8 @@ class Officer(models.Model):
     github = models.URLField('GitHub', blank=True)
     linkedin = models.URLField('LinkedIn', blank=True)
     description = models.TextField('Description')
-    first = None
+    first = models.CharField('Name', max_length=50, blank=True)
+    picture = models.ImageField('Picture', upload_to='/officers', blank=True)
 
     def __str__(self):
         return "Officer: " + self.name
@@ -20,6 +21,7 @@ class Event(models.Model):
     time = models.DateTimeField('Date and Time')
     location = models.CharField('Location', max_length=50)
     description = models.TextField('Description')
+    img = "title"
 
     def __str__(self):
         return "Event: " + self.title

@@ -125,6 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/assets/'
 STATIC_ROOT = secret.STATIC_ROOT
+MEDIA_ROOT = STATIC_ROOT + '/media'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),

@@ -38,7 +38,9 @@
         <hr><br>
         <div class="row">
             <div class="col s12 m12 l4 xl4">
+                {% if officer.picture %}
                 <div style="display: block; margin: auto; width: 194px;"><img class="responsive-img circle" src="{{ officer.picture.url }}"></div>
+                {% endif %}
             </div>
             <div class="col s12 m12 l8 xl8">
                 <p class="flow-text">{{ officer.description }}</p>

@@ -16,9 +16,12 @@ Including another URLconf
 import django
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf.urls.static import static
+from . import settings
+
 
 urlpatterns = [
     url(r'', include("index.urls")),
     url(r'^history/', include("history.urls")),
     url(rf'^admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

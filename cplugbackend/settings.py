@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'adminsortable',
     'index.apps.IndexConfig',
     'history.apps.HistoryConfig',
     # 'rest_framework',

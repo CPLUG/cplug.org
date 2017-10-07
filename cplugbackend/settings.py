@@ -127,7 +127,6 @@ STATIC_URL = '/assets/'
 STATIC_ROOT = secret.STATIC_ROOT
 MEDIA_ROOT = secret.MEDIA_ROOT,
 MEDIA_URL = '/media/'
-print(STATIC_ROOT)
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),

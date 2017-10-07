@@ -12,8 +12,8 @@
                    </div>
                 </a>
                 <div class="card-action black-text" >
-                  {% if officer.email %}
-                    <a class="btn-floating red" style="margin-right: 6px;" href="{{ officer.email }}" target="_blank"><i class="material-icons">mail</i></a>
+                    {% if officer.email %}
+                    <a class="btn-floating red" style="margin-right: 6px;" href="mailto:{{ officer.email }}" target="_blank"><i class="material-icons">mail</i></a>
                     {% endif %}
                     
                     {% if officer.website %}
@@ -25,8 +25,9 @@
                     {% endif %}
 
                     {% if officer.linkedin %}
-                    {% endif %}
                     <a class="btn-floating" style="color: #OO8CC9;" href="{{ officer.linkedin }}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    {% endif %}
+
                     <a class="modal-trigger" style="color: black;" href="#modal1{{ officer.name }}"><i class="material-icons right">more_vert</i></a>
                 </div>
             </div>    

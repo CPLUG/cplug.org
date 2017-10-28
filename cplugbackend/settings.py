@@ -126,7 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/assets/'
 STATIC_ROOT = secret.STATIC_ROOT
-MEDIA_ROOT = secret.MEDIA_ROOT,
+MEDIA_ROOT = secret.MEDIA_ROOT
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [

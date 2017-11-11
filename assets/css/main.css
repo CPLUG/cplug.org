@@ -35,3 +35,7 @@
 .fa {
   color: black;
 }
+
+.past-event {
+  display: none;
+}

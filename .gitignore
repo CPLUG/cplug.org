@@ -1,5 +1,6 @@
 cplugbackend/secret.py
 *.pyc
+venv
 
 # I think this is from Bluefish
 *~

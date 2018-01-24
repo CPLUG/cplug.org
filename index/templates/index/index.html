@@ -4,125 +4,125 @@
 
 {% block head_extra %}
 <title>
-  CPLUG
+    CPLUG
 </title>
 <link rel="stylesheet" href="{% static "css/main.css" %}">
 {% endblock head_extra %}
 
 {% block content %} 
 <div class="section green darken-2">
-<div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
-      <a class="btn-floating waves-effect waves-light btn-large red accent-2 click-to-toggle.show-on-medium-and-down">
-        <i class="material-icons">keyboard_arrow_up</i>
-      </a>
-      <ul>
-        <li><a class="btn-floating" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0; background-color: #3C67AE" href="https://www.facebook.com/groups/cplug/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a class="btn-floating black" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;" href="https://github.com/CPLUG" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-        <li><a class="btn-floating" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0; background-color: #2C2F33; padding: 5px;" href="https://discord.gg/8nupJ3h" target="_blank"><img src="{% get_media_prefix %}discord.svg"></a></li>
-        <li><a class="btn-floating modal-trigger green" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;" href="#mailing-modal" target="_blank"><i class="material-icons">mail</i></a></li>
-      </ul>
+    <div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating waves-effect waves-light btn-large red accent-2 click-to-toggle.show-on-medium-and-down">
+            <i class="material-icons">keyboard_arrow_up</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0; background-color: #3C67AE" href="https://www.facebook.com/groups/cplug/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a class="btn-floating black" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;" href="https://github.com/CPLUG" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a class="btn-floating" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0; background-color: #2C2F33; padding: 5px;" href="https://discord.gg/8nupJ3h" target="_blank"><img src="{% get_media_prefix %}discord.svg"></a></li>
+            <li><a class="btn-floating modal-trigger green" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;" href="#mailing-modal" target="_blank"><i class="material-icons">mail</i></a></li>
+        </ul>
     </div>
-<br>
-  <div class="row container" id="club-info">
+    <br>
+    <div class="row container" id="club-info">
 
-    <div class="col  s12 m12 l12 xl12">
-      <div class="card-panel white">
-        <h3 class="header">
-          About
-        </h3>
-        <p class="grey-text text-darken-3 lighten-3 flow-text">
-            We are CPLUG, the Cal Poly Linux Users Group. We're both users and fans of the GNU/Linux Operating System, and we want you to be too. We have regular talks and meetings, as well as social events when the opportunity arises. For information about future events <a href="#mailing-modal" class="modal-trigger">subscribe to our mailing list.</a>
-        </p>
-        <h4 class="header">
-          Goals/Purpose
-        </h4>            
-        <p class="grey-text text-darken-3 lighten-3 flow-text">
-          CPLUG's main purpose is to provide users of the Linux Operating System opportunities to socialize, and network, with both other students and people working in the industry.<br><br>Furthermore, we aim to promote the existance of the Linux Operating System as well as contribute new ideas to the Linux Project.
-        </p>    		
-      </div>
-    </div>
+        <div class="col  s12 m12 l12 xl12">
+            <div class="card-panel white">
+                <h3 class="header">
+                    About
+                </h3>
+                <p class="grey-text text-darken-3 lighten-3 flow-text">
+                We are CPLUG, the Cal Poly Linux Users Group. We're both users and fans of the GNU/Linux Operating System, and we want you to be too. We have regular talks and meetings, as well as social events when the opportunity arises. For information about future events <a href="#mailing-modal" class="modal-trigger">subscribe to our mailing list.</a>
+                </p>
+                <h4 class="header">
+                    Goals/Purpose
+                </h4>            
+                <p class="grey-text text-darken-3 lighten-3 flow-text">
+                CPLUG's main purpose is to provide users of the Linux Operating System opportunities to socialize, and network, with both other students and people working in the industry.<br><br>Furthermore, we aim to promote the existance of the Linux Operating System as well as contribute new ideas to the Linux Project.
+                </p>    		
+            </div>
+        </div>
 
         <div id="mailing-modal" class="modal">
-          <div class="modal-content">
-                    
-                    <div id="mc_embed_signup">
+            <div class="modal-content">
+
+                <div id="mc_embed_signup">
                     <form action="//cplug.us16.list-manage.com/subscribe/post?u=548ae269da5625d70ef1abe7c&amp;id=559d093bcf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                         <div id="mc_embed_signup_scroll">
-                        <h4>Mailing List Sign-up</h4>
-                        <div class="divider"></div><br>
-                    <div class="input-field">
-                        <input type="email" value="" name="EMAIL" class="required email validate" id="mce-EMAIL">
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" value="" name="FNAME" class="validate" id="mce-FNAME">
-                        <label for="First Name">First Name</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" value="" name="LNAME" class="validate" id="mce-LNAME">
-                        <label for="Last Name">Last Name</label>
-                    </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_548ae269da5625d70ef1abe7c_559d093bcf" tabindex="-1" value=""></div>
-                        <div class="modal-footer">
-<!--						    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="modal-action modal-close waves-effect waves-green btn-flat">-->
-                        <button class="modal-action modal-close btn waves-effect waves-light green darken-2" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Subscribe
-                          <i class="material-icons right">send</i>
-                        </button>                    
-                 </div>
+                            <h4>Mailing List Sign-up</h4>
+                            <div class="divider"></div><br>
+                            <div class="input-field">
+                                <input type="email" value="" name="EMAIL" class="required email validate" id="mce-EMAIL">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" value="" name="FNAME" class="validate" id="mce-FNAME">
+                                <label for="First Name">First Name</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" value="" name="LNAME" class="validate" id="mce-LNAME">
+                                <label for="Last Name">Last Name</label>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_548ae269da5625d70ef1abe7c_559d093bcf" tabindex="-1" value=""></div>
+                            <div class="modal-footer">
+                                <!--						    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="modal-action modal-close waves-effect waves-green btn-flat">-->
+                                <button class="modal-action modal-close btn waves-effect waves-light green darken-2" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Subscribe
+                                    <i class="material-icons right">send</i>
+                                </button>                    
+                            </div>
                         </div>
                     </form>
-                    </div>
+                </div>
 
-    <!--End mc_embed_signup-->              
+                <!--End mc_embed_signup-->              
 
-          </div>
+            </div>
         </div>
-  </div>
+    </div>
 </div>
 
 <div class="section grey darken-3" id="Events">
-  <br>
-  <div class="row container" id="event_cards">
-      <h3 class="white-text center">Upcoming Events</h3><br>
-    <div id="events_cards">
-        {% include "index/events.html" %}
+    <br>
+    <div class="row container flex" id="event_cards">
+        <h3 class="white-text center">Upcoming Events</h3><br>
+        <div id="events_cards">
+            {% include "index/events.html" %}
+        </div>
     </div>
-  </div>
 </div>	        
 
 
 <!-- Officer Section --> 		  
-    <div class="section green darken-2">
-<div class="container" id="officers-section">
-<br>
-<h3 class="white-text center">Officers</h3>
-<br>
-  <div class="row" id="club-officers">
-  <div id="officers-cards">
-        {% include "index/officers.html" %}
-  </div>
-</div>
-</div>
+<div class="section green darken-2">
+    <div class="container" id="officers-section">
+        <br>
+        <h3 class="white-text center">Officers</h3>
+        <br>
+        <div class="row" id="club-officers">
+            <div id="officers-cards">
+                {% include "index/officers.html" %}
+            </div>
+        </div>
+    </div>
 </div>
 
 
- <div class="parallax-container" style="height: 350px;">
-<div class="parallax"><img src="{% get_media_prefix %}polyn.jpg"></div>
+<div class="parallax-container" style="height: 350px;">
+    <div class="parallax"><img src="{% get_media_prefix %}polyn.jpg"></div>
 </div>
 {% endblock content %}
 
 
 {% block extras %}
 <script>
-$( document ).ready(function(){
-  $(".button-collapse").sideNav();
-  $('.modal').modal();
-  $('.parallax').parallax();
-})
+    $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+        $('.modal').modal();
+        $('.parallax').parallax();
+    })
 $('.carousel.carousel-slider').carousel({fullWidth: true});
 
 </script>

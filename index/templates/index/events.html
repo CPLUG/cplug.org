@@ -12,7 +12,7 @@
         {% endif %}
           <div class="card hoverable">
             <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="{% static "" %}media/events/{{ event.title }}.jpg">
+            <img class="activator" src="{% static "" %}media/events/{{ event.title }}.jpg" onerror="this.parentNode.removeChild(this);">
             </div>
 
             <div class="card-content">
